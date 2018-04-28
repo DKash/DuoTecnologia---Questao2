@@ -1,0 +1,32 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Teste Projuris</title>
+    <script>
+        function adicionaDiv() {
+            var divList = document.getElementsByTagName("div");
+            // Apenas essas duas linhas abaixo foram alteradas
+            var contador = divList.length;
+            for (var i = 0; i < contador; i++) {
+                //Fim das alterações
+                var novaDiv = document.createElement("div");
+                decorarDiv(novaDiv);
+                divList[i].appendChild(novaDiv);
+            }
+        }
+
+        function decorarDiv(div) {
+            div.textContent = 'Nova Div';
+        }
+    </script>
+</head>
+<body>
+
+<button onclick="adicionaDiv()">Adiciona Div</button>
+<!--Foi adicionado esses styles apenas para facilitar a visualização da estrutura das divs-->
+<div id="1" class="col-md-3" style="background-color: #ffee00;margin-bottom:30px">Div 1
+    <div id="2" class="col-md-2" style="background-color:#eeeeee">Div 2</div>
+</div>
+<!--Fim-->
+</body>
+</html>
